@@ -1,0 +1,53 @@
+cve_id,date,month,vendor,author,source,exploit_url,sigable,rules,reason
+2373-8877,09/09/2013,January,Adobe,Mukesh,ITW,Test1.com,Yes,99209910,False
+2236-7763,09/05/2018,February,Microsoft,Sujit,ITW,Exploit.com,No,False,Insecure library loading
+2263-8838,09/30/2010,April,Microsoft,Vaibhav,ITW,Yaya.com,Yes,22302230,False
+6652-8383,09/27/2018,May,Adobe,Sujit,MAPP,False,Yes,33103310,False
+7763-7727,01/01/2011,June,Adobe,Vaibhav,MAPP,False,No,False,Kernel exploit - local
+2272-3383,09/05/2007,June,Microsoft,Vaibhav,No info,False,False,False,False
+37737-88373,09/02/2008,August,Adobe,Sujit,No info,False,False,False,False
+7779-77373,08/06/2013,July,Adobe,Mukesh,No info,False,False,False,False
+6673-3379,09/01/2008,August,Microsoft,Vaibhav,MAPP,False,No,False,Others
+6722-3383,09/01/2004,January,Adobe,Mukesh,MAPP,False,No,False,No information
+5562-7777,09/05/2007,September,Adobe,Sujit,No info,False,False,False,False
+0011-0022,09/12/2011,May,Microsoft,Sujit,ITW,Yee.com,Yes,3310993,False
+6672-3373,09/18/2002,September,Microsoft,Vaibhav,MAPP,False,No,False,Same origin policy bypass
+6672-88882,09/11/2011,April,Adobe,Mukesh,No info,False,False,False,False
+9990-7777,06/01/2018,September,Adobe,Mukesh,ITW,Exp.com,Yes,22992299,False
+8800-77282,09/01/2012,April,Adobe,Mukesh,No info,False,False,False,False
+7778-7780,09/05/2007,February,Adobe,Vaibhav,MAPP,False,Yes,77838800,False
+9902-7778,09/01/2016,January,Adobe,Sujit,No info,False,False,False,False
+5555-7777,07/02/2014,February,Microsoft,Sujit,ITW,Hahahha.com,No,False,FP
+1234-5678,01/07/2011,March,Adobe,Sujit,MAPP,False,No,False,Information disclosure
+1234-5677,09/01/2010,April,Adobe,Sujit,MAPP,False,No,False,Complex to repro
+1222-6672,09/01/2010,April,Adobe,Sujit,MAPP,False,No,False,No information
+7783-7777,09/14/2033,March,Adobe,Vaibhav,No info,False,False,False,False
+2004-3666,09/17/2016,April,Microsoft,Vaibhav,ITW,Http.com,Yes,227383,False
+3338-3339,12/02/2011,October,Microsoft,Vaibhav,No info,False,False,False,False
+3380-2228,12/04/2011,November,Microsoft,Sujit,No info,False,False,False,False
+3374-7777,09/24/2016,January,Adobe,Vaibhav,MAPP,False,Yes,33718383,False
+7782-3399,12/15/2011,September,Adobe,Sujit,ITW,Dd.com,Yes,33003300,False
+4489-4478,06/15/2018,September,Adobe,Mukesh,No info,False,False,False,False
+23038-3382,03/17/2010,July,Adobe,Sujit,ITW,Ddh.com,No,False,Privilege escalation
+7725-2222,08/10/2033,October,Adobe,Mukesh,MAPP,False,Yes,88928899,False
+1111-2222,09/19/2007,June,Adobe,Vaibhav,No info,False,False,False,False
+7788-8990,09/20/2014,January,Microsoft,Vaibhav,ITW,Sjs.com,No,False,Spoofing
+9992-7772,02/19/2000,March,Adobe,Mukesh,ITW,est.com,Yes,2233223,False
+9992-7722,09/27/2018,September,Adobe,Mukesh,ITW,test.com,Yes,22121121,False
+2880-9902,07/10/2018,July,Microsoft,Sujit,MAPP,False,Yes,33103310,False
+9902-9982,02/01/2018,September,Microsoft,Sujit,ITW,cool.com,Yes,33122212,False
+7783-8722,01/26/2018,June,Microsoft,Mukesh,No info,False,False,False,False
+7782-9922,09/16/2014,December,Microsoft,Vaibhav,No info,False,False,False,False
+9902-6662,03/13/2018,April,Adobe,Vaibhav,MAPP,False,Yes,8897776,False
+4465-6652,04/25/2018,October,Adobe,Vaibhav,MAPP,False,No,False,Privilege escalation
+5552-6662,05/21/2018,October,Microsoft,Mukesh,No info,False,False,False,False
+2222-9983,09/18/2012,July,Microsoft,Sujit,No info,False,False,False,False
+2233-9982,03/17/2015,December,Adobe,Sujit,MAPP,False,No,False,CSRF
+7777-88672,04/22/2015,November,Microsoft,Sujit,MAPP,False,No,False,PE format
+8873-9992,12/16/2010,October,Adobe,Sujit,MAPP,False,Yes,334152,False
+9982-0081,02/14/2012,February,Adobe,Sujit,No info,False,False,False,False
+0062-0001,01/18/2012,September,Adobe,Mukesh,ITW,kjsdf.com,No,False,Out of bounds
+5562-8872,01/10/2011,October,Microsoft,Mukesh,MAPP,False,Yes,88720,False
+7762-0001,04/20/2018,October,Microsoft,Sujit,MAPP,False,Yes,778261,False
+0072-666,09/30/2016,March,Adobe,Vaibhav,No info,False,False,False,False
+7762-3342,09/12/2016,August,Microsoft,Sujit,MAPP,False,No,False,Same origin policy bypass

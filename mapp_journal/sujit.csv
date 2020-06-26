@@ -1,0 +1,15 @@
+cve_id,date,month,vendor,author,source,exploit_url,sigable,rules,reason
+1234-5678,09/01/2018,September,Microsoft,Sujit,No info,False,False,False,False
+23728-238723,09/01/2010,February,Adobe,Mukesh,ITW,aa.com,No,False,Complex to repro
+11232-8882,09/22/2010,January,Adobe,Sujit,ITW,dsfdf.com,No,False,Complex to repro
+9982-83883,09/19/2018,September,Microsoft,Sujit,No info,False,False,False,False
+2380-89823,09/19/2018,August,Microsoft,Sujit,MAPP,False,Yes,77772,False
+2323-9823,09/19/2018,February,Microsoft,Mukesh,ITW,jkflg.com,No,False,Kernel exploit - local
+8892-0882,09/04/2018,June,Adobe,Sujit,ITW,hah.com,No,False,Insecure library loading
+28828-29382,09/27/2018,July,Microsoft,Vaibhav,No info,False,False,False,False
+6673-0011,03/12/2018,September,Microsoft,Sujit,MAPP,False,No,False,No information
+0011-2345,09/01/2010,July,Microsoft,Vaibhav,No info,False,False,False,False
+8923-8841,08/14/2018,October,Adobe,Vaibhav,MAPP,False,Yes,998282,False
+8892-0001,09/01/2018,August,Adobe,Mukesh,ITW,test.com,No,False,Use-after-free
+8828723-902932,03/12/2018,September,Microsoft,Vaibhav,MAPP,False,Yes,000909,False
+283-9993,09/09/2014,September,Microsoft,Mukesh,No info,False,False,False,False

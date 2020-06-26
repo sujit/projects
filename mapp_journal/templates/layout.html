@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MAPP Backlog Journal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/united/bootstrap.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .input-group-text {
+            min-width: 80px;
+        }
+
+        .container {
+            padding: 35px;
+            border: 2px solid #e4e4e4;
+            box-shadow: 2px 2px 20px 5px #f2f2f2;
+            text-align: center;
+        }
+
+        #datepicker {
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 align="center">MAPP Metadata</h1>
+    <hr>
+    <div class="container">
+        <form action="{{ url_for('mappmetafeed') }}" method="POST">
+
+            <div class="form-row" id="id_div_cve">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">CVE</span>
+                    </div>
+                    <input name="nmCVEID" required="true" type="text" placeholder="e.g: 1234-5678" class="form-control" autocomplete="off" autofocus>
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_date">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Date</span>
+                    </div>
+                    <input name="nmDate" required="true" type="text" id="datepicker">
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_months">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputMonth">Month</label>
+                    </div>
+                    <select name="mapp_month" class="custom-select" id="inputMonth">
+                        <option value=""></option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_vendor">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputVendor">Vendor</label>
+                    </div>
+                    <select name="nmVendor" class="custom-select" id="inputVendor">
+                        <option value=""></option>
+                        <option value="Adobe">Adobe</option>
+                        <option value="Microsoft">Microsoft</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_sigdev_authors">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputAuthor">Author</label>
+                    </div>
+                    <select name="nmAuthor" class="custom-select" id="inputAuthor">
+                        <option value=""></option>
+                        <option value="Mukesh">Mukesh</option>
+                        <option value="Sujit">Sujit</option>
+                        <option value="Vaibhav">Vaibhav</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_source">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputMAPP">Source</label>
+                    </div>
+                    <select name="nmSource" class="custom-select" id="id_options_source" onchange="change2()">
+                        <option value=""></option>
+                        <option value="ITW">ITW</option>
+                        <option value="MAPP">MAPP</option>
+                        <option value="No info">No info</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_itw_exploit_url" style="display: none;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Exploit</span>
+                    </div>
+                    <input  name="nmITWExploitURL" type="text" placeholder="e.g: https://www.exploit-db.com/exploits/12345/" class="form-control" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-row" id="id_div_sigable" style="display: none;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="sigBool">Sigable</label>
+                    </div>
+                    <select name="nmSigable" class="custom-select" id="inputSigable" onchange="change()">
+                        <option value=""></option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="reasonscombo" style="display: none;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="nonSigableReasons">Reason</label>
+                    </div>
+                    <select name="nmReasons" class="custom-select" id="nonSigableReasons">
+                        <option value=""></option>
+                        <option value="Buffer overflow">Buffer overflow</option>
+                        <option value="Complex to repro">Complex to repro</option>
+                        <option value="CSRF">CSRF</option>
+                        <option value="Denial of service">Denial of service</option>
+                        <option value="FP">FP</option>
+                        <option value="Information disclosure">Information disclosure</option>
+                        <option value="Insecure library loading">Insecure library loading</option>
+                        <option value="Kernel exploit - local">Kernel exploit - local</option>
+                        <option value="Memory corruption">Memory corruption</option>
+                        <option value="No information">No information</option>
+                        <option value="Others">Others</option>
+                        <option value="Out of bounds">Out of bounds</option>
+                        <option value="Privilege escalation">Privilege escalation</option>
+                        <option value="PE format">PE format</option>
+                        <option value="Remote code execution">Remote code execution</option>
+                        <option value="Same origin policy bypass">Same origin policy bypass</option>
+                        <option value="Security bypass">Security bypass</option>
+                        <option value="Spoofing">Spoofing</option>
+                        <option value="Use-after-free">Use-after-free</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" id="boolSigTrue" style="display: none;">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Rules</span>
+                    </div>
+                    <input name="snortsids" type="text" placeholder="e.g: 3310111" class="form-control" autocomplete="off">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-lg">SAVE</button>
+            <button type="reset" class="btn btn-danger btn-lg">RESET</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+
+    function change2() {
+        if (document.getElementById("id_options_source").value === "No info") {
+            document.getElementById("boolSigTrue").style.display = 'none';
+            document.getElementById("id_div_itw_exploit_url").style.display = 'none';
+            document.getElementById("id_div_sigable").style.display = 'none';
+            document.getElementById("reasonscombo").style.display = 'none';
+        }
+        else if (document.getElementById("id_options_source").value === "MAPP") {
+            document.getElementById("boolSigTrue").style.display = 'none';
+            document.getElementById("id_div_itw_exploit_url").style.display = 'none';
+            document.getElementById("id_div_sigable").style.display = 'block';
+            document.getElementById("reasonscombo").style.display = 'none';
+        }
+        else if (document.getElementById("id_options_source").value === "ITW") {
+            document.getElementById("boolSigTrue").style.display = 'block';
+            document.getElementById("id_div_itw_exploit_url").style.display = 'block';
+            document.getElementById("id_div_sigable").style.display = 'block';
+            document.getElementById("reasonscombo").style.display = 'none';
+        }
+        else if (document.getElementById("id_options_source").value === "...") {
+            document.getElementById("boolSigTrue").style.display = 'none';
+            document.getElementById("id_div_itw_exploit_url").style.display = 'none';
+            document.getElementById("id_div_sigable").style.display = 'none';
+            document.getElementById("reasonscombo").style.display = 'none';
+        }
+    }
+
+    function change() {
+        if (document.getElementById("inputSigable").value === "Yes") {
+            document.getElementById("boolSigTrue").style.display = 'block';
+            document.getElementById("reasonscombo").style.display = 'none';
+        }
+        else {
+            document.getElementById("boolSigTrue").style.display = 'none';
+            document.getElementById("reasonscombo").style.display = 'block';
+        }
+    }
+
+</script>
+</html>
