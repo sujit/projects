@@ -24,7 +24,7 @@ MarkupSafe==1.0
 maya==0.5.0
 mccabe==0.6.1
 normality==0.6.1
-numpy==1.15.1
+numpy==1.22.0
 pandas==0.23.4
 parso==0.3.1
 pendulum==1.5.1
